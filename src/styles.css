@@ -1,0 +1,12 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "~materialize-css/dist/css/materialize.css";
+@import "~material-icons/iconfont/material-icons.css";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.title {
+  left: 0 !important;
+  transform: translateX(0) !important;
+}

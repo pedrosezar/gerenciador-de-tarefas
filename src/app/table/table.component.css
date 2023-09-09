@@ -1,0 +1,22 @@
+table tbody tr td {
+  font-size: 16px;
+}
+table tbody tr td.title-task {
+  width: 60%;
+  font-size: 16px;
+}
+table tbody tr td.title-task span {
+  font-size: 16px;
+  color: #000;
+}
+table tbody tr td.action {
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+table tbody tr td.action .material-icons {
+  font-size: 2rem;
+}
+table tbody tr td a.btn-excluir {
+  margin-left: 10px;
+}
