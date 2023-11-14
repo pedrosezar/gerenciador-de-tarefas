@@ -41,8 +41,8 @@ https://www.figma.com/file/vcbKYpH9xy5LAD5yuoFl4A/Gerenciador-de-Tarefas---Mobil
 
 #### RA5 - Criar interfaces de navegação intuitivas e responsivas, implementando roteamento em aplicações de página única (SPA).
 
-- [ ] ID14: O aluno configurou rotas para diferentes partes da aplicação, permitindo a navegação entre páginas distintas.
-- [ ] ID15: O aluno demonstrou a habilidade de passar dados entre componentes que representam diferentes telas usando parâmetros de rotas, garantindo uma troca eficiente de informações.
+- [x] ID14: O aluno configurou rotas para diferentes partes da aplicação, permitindo a navegação entre páginas distintas.
+- [x] ID15: O aluno demonstrou a habilidade de passar dados entre componentes que representam diferentes telas usando parâmetros de rotas, garantindo uma troca eficiente de informações.
 - [ ] ID16: O aluno criou uma estrutura de navegação aninhada para representar hierarquias de conteúdo.
 - [ ] ID17: O aluno aplicou guardas de rotas para controlar o acesso a rotas específicas da aplicação, assegurando que somente usuários autorizados possam acessar determinadas partes da interface.
 
@@ -50,8 +50,8 @@ https://www.figma.com/file/vcbKYpH9xy5LAD5yuoFl4A/Gerenciador-de-Tarefas---Mobil
 
 - [ ] ID18: O aluno fez requisições assíncronas a uma API simulada, compreendendo os protocolos HTTP e formatos de dados para as operações GET, POST, PUT, PATCH e DELETE.
 - [ ] ID19: O aluno tratou respostas de sucesso e erros das requisições assíncronas de forma apropriada.
-- [ ] ID20: O aluno aplicou validações de entrada nos campos do formulário, utilizando técnicas como expressões regulares (REGEX), e apresentou mensagens de erro claras e informativas para auxiliar os usuários a corrigir entradas incorretas.
-- [ ] ID21: O aluno desabilitou adequadamente o botão de submit enquanto o formulário continha campos inválidos, promovendo uma experiência de usuário mais intuitiva e evitando a submissão de dados incorretos.
+- [x] ID20: O aluno aplicou validações de entrada nos campos do formulário, utilizando técnicas como expressões regulares (REGEX), e apresentou mensagens de erro claras e informativas para auxiliar os usuários a corrigir entradas incorretas.
+- [x] ID21: O aluno desabilitou adequadamente o botão de submit enquanto o formulário continha campos inválidos, promovendo uma experiência de usuário mais intuitiva e evitando a submissão de dados incorretos.
 - [ ] ID22: O aluno demonstrou a capacidade de utilizar Promises e Observables para tratar respostas assíncronas.
 
 #### RA7 - Efetuar o build e deploy da aplicação em ambientes de produção.

@@ -1,4 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { NgForm } from "@angular/forms";
+
+import { TaskService } from "./../services/task.service";
+import { Task } from "./../model/task";
 
 @Component({
   selector: "app-form",
@@ -6,24 +10,37 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./form.component.css"],
 })
 export class FormComponent implements OnInit {
-  value = "";
-  invalid = false;
-  message = "";
+  @ViewChild("form") form!: NgForm;
 
-  constructor() {}
+  task!: Task;
+  tasks?: Task[];
+
+  isSubmitted!: boolean;
+  isShowMessage: boolean = false;
+  isSuccess!: boolean;
+  message!: string;
+
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.message = "";
+    this.task = new Task("");
+    this.tasks = this.taskService.getTasks();
   }
 
   onSubmit() {
-    if (this.value == "") {
-      this.invalid = true;
-      this.message = "O campo título da tarefa não pode ficar vazio";
-      return;
+    this.isSubmitted = true;
+    if (!this.taskService.isExist(this.task.title)) {
+      this.taskService.save(this.task);
+    } else {
+      this.taskService.update(this.task);
     }
+    this.isShowMessage = true;
+    this.isSuccess = true;
+    this.message = "Cadastro realizado com sucesso!";
 
-    this.invalid = false;
-    this.message = "Tarefa cadastrada com sucesso";
+    this.form.reset();
+    this.task = new Task("");
+
+    this.tasks = this.taskService.getTasks();
   }
 }
