@@ -6,7 +6,6 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { ContainerComponent } from "./container/container.component";
 import { TableComponent } from "./table/table.component";
-import { FooterComponent } from "./footer/footer.component";
 import { FormComponent } from "./form/form.component";
 import { FormsModule } from "@angular/forms";
 
@@ -16,7 +15,6 @@ import { FormsModule } from "@angular/forms";
     HeaderComponent,
     ContainerComponent,
     TableComponent,
-    FooterComponent,
     FormComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
