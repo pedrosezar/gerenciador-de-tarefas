@@ -3,15 +3,15 @@ export class Task {
   title: string;
   status: boolean;
   date: Date;
-  constructor(title: string, status: boolean = false, date: Date = new Date()) {
+  constructor(title: string) {
     this.id = String(Math.round(Math.random() * 1000));
     this.title = title;
-    this.status = status;
-    this.date = date;
+    this.status = false;
+    this.date = new Date();
   }
 
   public static clone(task: Task) {
-    let t: Task = new Task(task.title, task.status);
+    let t: Task = new Task(task.title);
     t.title = task.title;
     t.status = task.status;
     t.date = task.date;
@@ -24,7 +24,7 @@ export class Task {
    * @returns
    */
   public static toWS(task: Task) {
-    let t: Task = new Task(task.title, task.status);
+    let t: Task = new Task(task.title);
     t.title = task.title;
     t.status = task.status;
     t.date = task.date;

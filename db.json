@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Fazer alguma coisa",
+      "status": true,
+      "date": "2023-09-04T12:53:33.728Z"
+    },
+    {
+      "id": 2,
+      "title": "Fazer outra coisa",
+      "status": false,
+      "date": "2023-09-12T03:49:03.776Z"
+    },
+    {
+      "id": 3,
+      "title": "Fazer alguma coisa 2",
+      "status": false,
+      "date": "2023-09-04T12:59:27.798Z"
+    },
+    {
+      "id": 4,
+      "title": "Fazer outra coisa 2",
+      "status": true,
+      "date": "2023-09-06T15:58:56.380Z"
+    },
+    {
+      "id": 5,
+      "title": "Fazer aquela coisa",
+      "status": true,
+      "date": "2023-11-13T15:59:14.564Z"
+    }
+  ]
+}

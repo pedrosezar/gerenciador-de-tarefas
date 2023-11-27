@@ -1,10 +1,10 @@
-import { Constants } from 'src/app/util/constants';
-import { Injectable } from '@angular/core';
-import { Task } from './../model/task';
-import { WebStorageUtil } from 'src/app/util/web-storage-util';
+import { Constants } from "src/app/util/constants";
+import { Injectable } from "@angular/core";
+import { Task } from "./../model/task";
+import { WebStorageUtil } from "src/app/util/web-storage-util";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class TaskService {
   tasks!: Task[];

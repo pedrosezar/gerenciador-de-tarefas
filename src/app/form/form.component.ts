@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 
+import { Shared } from "./../util/shared";
 import { TaskService } from "./../services/task.service";
 import { Task } from "./../model/task";
 
@@ -23,6 +24,7 @@ export class FormComponent implements OnInit {
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
+    Shared.initializeWebStorage();
     this.task = new Task("");
     this.tasks = this.taskService.getTasks();
   }

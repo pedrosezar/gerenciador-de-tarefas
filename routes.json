@@ -1,0 +1,5 @@
+{
+  "/tasks/status/:t": "/tasks?status=:t",
+  "/tarefas": "/tasks",
+  "/tarefas/:id": "/tasks/:id"
+}

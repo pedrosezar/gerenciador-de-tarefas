@@ -1,7 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 
+import { Shared } from "./../util/shared";
 import { TaskService } from "./../services/task.service";
+import { TaskPromiseService } from "./../services/task-promise.service";
 import { Task } from "./../model/task";
+import { WebStorageUtil } from "./../util/web-storage-util";
+import { Constants } from "./../util/constants";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-table",
@@ -17,11 +22,29 @@ export class TableComponent implements OnInit {
   isSuccess!: boolean;
   message!: string;
 
-  constructor(private taskService: TaskService) {}
+  constructor(
+    private taskService: TaskService,
+    private taskPromiseService: TaskPromiseService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.task = new Task("");
+    Shared.initializeWebStorage();
+    this.task = WebStorageUtil.get(Constants.TASKS_KEY);
     this.tasks = this.taskService.getTasks();
+    this.taskPromiseService
+      .getByTitle(Constants.TASKS_KEY)
+      .then((t: Task[]) => {
+        this.task = t[0];
+        localStorage.setItem(
+          Constants.TASKS_KEY,
+          JSON.stringify(Task.toWS(this.task))
+        );
+      })
+      .catch((e) => {
+        //erro ao pegar do json-server
+        this.task = WebStorageUtil.get(Constants.TASKS_KEY);
+      });
   }
 
   /**
@@ -32,6 +55,7 @@ export class TableComponent implements OnInit {
   onEdit(task: Task) {
     let clone = Task.clone(task);
     this.task = clone;
+    this.router.navigate(["/tarefa/", task?.id]);
   }
 
   onDelete(title: string) {

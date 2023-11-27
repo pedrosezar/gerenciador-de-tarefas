@@ -7,7 +7,8 @@ import { HeaderComponent } from "./header/header.component";
 import { ContainerComponent } from "./container/container.component";
 import { TableComponent } from "./table/table.component";
 import { FormComponent } from "./form/form.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { FormsModule } from "@angular/forms";
     TableComponent,
     FormComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
