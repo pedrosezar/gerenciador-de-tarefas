@@ -1,0 +1,4 @@
+{
+  "/tarefa": "/tasks",
+  "/tarefa/:id": "/tasks/:id"
+}

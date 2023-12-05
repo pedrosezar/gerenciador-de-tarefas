@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col s12">
+    <div
+      id="msg-login"
+      class="card-panel white-text"
+      [class.red]="!this.isSuccess"
+      [class.blue]="this.isSuccess"
+      *ngIf="this.isShowMessage"
+    >
+      {{ this.message }}
+    </div>
+  </div>
+  <div class="row" *ngIf="task">
+    <form class="col s12" #form="ngForm" (submit)="onSubmit()">
+      <div class="row">
+        <div class="input-field col s12">
+          <input
+            id="input-title"
+            name="input-title"
+            type="text"
+            class="validate"
+            [(ngModel)]="this.task.title"
+            pattern="^([A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)+"
+            #title="ngModel"
+            required
+          />
+          <label for="input-title">Título da tarefa *</label>
+          <div class="red-text" [hidden]="title.valid || title.untouched">
+            Por favor, informe o título da tarefa.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12 l6">
+          <input
+            id="input-date"
+            name="input-date"
+            type="date"
+            class="validate"
+            [(ngModel)]="this.task.date"
+          />
+          <label for="input-date">Data</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 l6">
+          <button
+            class="waves-effect waves-light btn orange"
+            type="submit"
+            [disabled]="!form.valid"
+          >
+            salvar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

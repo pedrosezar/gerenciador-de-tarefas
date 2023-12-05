@@ -1,82 +1,59 @@
-<table class="striped">
+<div class="col s12">
+  <div
+    id="msg-login"
+    class="card-panel white-text"
+    [class.red]="!this.isSuccess"
+    [class.blue]="this.isSuccess"
+    *ngIf="this.isShowMessage"
+  >
+    {{ this.message }}
+  </div>
+</div>
+<table class="striped" *ngIf="tasks && tasks!.length > 0">
   <tbody>
-    <tr>
+    <tr *ngFor="let t of tasks">
       <td class="title-task">
-        <label for="Fazer alguma coisa">
+        <label for="{{ t.title }}">
           <input
+            *ngIf="t.status"
             type="checkbox"
-            id="Fazer alguma coisa"
+            id="{{ t.title }}"
             class="filled-in"
             checked="checked"
           />
-          <span>Fazer alguma coisa</span>
-        </label>
-      </td>
-      <td>04/09/2023</td>
-      <td class="action">
-        <a class="waves-effect waves-light btn orange"
-          ><i class="material-icons left">edit</i>EDITAR</a
-        >
-        <a class="waves-effect waves-light btn orange btn-excluir"
-          ><i class="material-icons left">delete</i>EXCLUIR</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td class="title-task">
-        <label for="Fazer outra coisa">
-          <input type="checkbox" id="Fazer outra coisa" class="filled-in" />
-          <span>Fazer outra coisa</span>
-        </label>
-      </td>
-      <td>11/09/2023</td>
-      <td class="action">
-        <a class="waves-effect waves-light btn orange"
-          ><i class="material-icons left">edit</i>EDITAR</a
-        >
-        <a class="waves-effect waves-light btn orange btn-excluir"
-          ><i class="material-icons left">delete</i>EXCLUIR</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td class="title-task">
-        <label for="Fazer alguma coisa 2">
-          <input type="checkbox" id="Fazer alguma coisa 2" class="filled-in" />
-          <span>Fazer alguma coisa 2</span>
-        </label>
-      </td>
-      <td>12/09/2023</td>
-      <td class="action">
-        <a class="waves-effect waves-light btn orange"
-          ><i class="material-icons left">edit</i>EDITAR</a
-        >
-        <a class="waves-effect waves-light btn orange btn-excluir"
-          ><i class="material-icons left">delete</i>EXCLUIR</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td class="title-task">
-        <label for="Fazer outra coisa 2">
           <input
+            *ngIf="!t.status"
             type="checkbox"
-            id="Fazer outra coisa 2"
+            id="{{ t.title }}"
             class="filled-in"
-            checked="checked"
           />
-          <span>Fazer outra coisa</span>
+          <span>{{ t.title }}</span>
         </label>
       </td>
-      <td>06/09/2023</td>
+      <td>{{ t.date | date : "dd/MM/yyyy" }}</td>
       <td class="action">
-        <a class="waves-effect waves-light btn orange"
-          ><i class="material-icons left">edit</i>EDITAR</a
+        <a
+          [routerLink]="['/tarefa', t.id, 'edit']"
+          class="waves-effect waves-light btn orange"
+          ><i class="material-icons left">edit</i>editar</a
         >
-        <a class="waves-effect waves-light btn orange btn-excluir"
+        <a
+          class="waves-effect waves-light btn orange btn-excluir"
+          (click)="onDelete(t.id!)"
           ><i class="material-icons left">delete</i>EXCLUIR</a
         >
       </td>
     </tr>
   </tbody>
 </table>
+
+<div *ngIf="!tasks || tasks!.length == 0">
+  <div class="row">
+    <div class="center-align">
+      <i class="col s12 material-icons large">mood_bad</i>
+      <span class="col s12 flow-text"
+        >Ainda não temos tarefas cadastradas!</span
+      >
+    </div>
+  </div>
+</div>
