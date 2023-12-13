@@ -1,16 +1,3 @@
 {
-  "tasks": [
-    {
-      "title": "Fazer as atividades de angular",
-      "status": false,
-      "date": "2023-12-14",
-      "id": 2
-    },
-    {
-      "title": "Ahjkhjh hjgjhj",
-      "status": false,
-      "date": "2023-12-13T17:38:11.341Z",
-      "id": 3
-    }
-  ]
+  "tasks": []
 }
