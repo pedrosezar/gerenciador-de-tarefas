@@ -1,52 +1,16 @@
 {
   "tasks": [
     {
-      "title": "Fazer alguma coisa",
-      "status": true,
-      "date": "2023-09-04",
-      "id": 1
-    },
-    {
-      "title": "Fazer outra coisa",
+      "title": "Fazer as atividades de angular",
       "status": false,
-      "date": "2023-09-12",
+      "date": "2023-12-14",
       "id": 2
     },
     {
-      "title": "Fazer aquela coisa",
-      "status": true,
-      "date": "2023-11-13",
+      "title": "Ahjkhjh hjgjhj",
+      "status": false,
+      "date": "2023-12-13T17:38:11.341Z",
       "id": 3
-    },
-    {
-      "title": "Fazer as atividades de angular",
-      "status": false,
-      "date": "2023-12-02",
-      "id": 4
-    },
-    {
-      "title": "Fazer as atividade de react native",
-      "status": true,
-      "date": "2023-12-04",
-      "id": 5
-    },
-    {
-      "title": "Fazer as atividades de ruby on rails",
-      "status": false,
-      "date": "2023-12-09",
-      "id": 6
-    },
-    {
-      "title": "Fazer as atividades de computação em nuvem",
-      "status": false,
-      "date": "2023-12-17",
-      "id": 7
-    },
-    {
-      "title": "Fazer as atividades de informática na sociedade",
-      "status": true,
-      "date": "2023-12-13",
-      "id": 8
     }
   ]
 }

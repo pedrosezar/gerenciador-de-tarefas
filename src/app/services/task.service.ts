@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { lastValueFrom } from "rxjs";
 
 import { Task } from "./../model/task";
 
@@ -24,8 +25,8 @@ export class TaskService {
     return this.http.post<Task>(this.URL, task);
   }
 
-  update(task: Task): Observable<Task> {
-    return this.http.patch(`${this.URL}/${task.id}`, task);
+  update(task: Task): Promise<Task> {
+    return lastValueFrom(this.http.patch(`${this.URL}/${task.id}`, task));
   }
 
   delete(id: number) {

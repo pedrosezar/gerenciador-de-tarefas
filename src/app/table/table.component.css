@@ -20,3 +20,18 @@ table tbody tr td.action .material-icons {
 table tbody tr td a.btn-excluir {
   margin-left: 10px;
 }
+@media (max-width: 600px) {
+  table tbody tr td,
+  table tbody tr .title-task label span {
+    font-size: 12px;
+  }
+  table tbody tr td.action {
+    margin: 0 !important;
+  }
+  table tbody tr td a.btn-editar span {
+    display: none;
+  }
+  table tbody tr td a.btn-excluir span {
+    display: none;
+  }
+}
