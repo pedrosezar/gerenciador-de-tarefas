@@ -5,8 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --base-href=/gerenciador-de-tarefas/",
-    "ghpages": "angular-cli-ghpages --dir=dist/gerenciador-de-tarefas --repo=https://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@github.com/pedrosezar/gerenciador-de-tarefas.git --name=pedrosezar --email=pedrosezar@gmail.com",
-    "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "json:server": "json-server --watch db.json",

@@ -34,13 +34,15 @@
       <td class="action">
         <a
           [routerLink]="['/tarefa', t.id, 'edit']"
-          class="waves-effect waves-light btn orange"
-          ><i class="material-icons left">edit</i>editar</a
+          class="waves-effect waves-light btn orange btn-editar"
+          ><i class="material-icons left">edit</i><span>editar</span></a
         >
+      </td>
+      <td class="action">
         <a
           class="waves-effect waves-light btn orange btn-excluir"
           (click)="onDelete(t.id!)"
-          ><i class="material-icons left">delete</i>EXCLUIR</a
+          ><i class="material-icons left">delete</i><span>excluir</span></a
         >
       </td>
     </tr>
