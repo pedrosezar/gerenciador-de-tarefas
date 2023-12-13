@@ -48,18 +48,10 @@ export class EditComponent implements OnInit {
       id: this.task.id,
     };
 
-    this.taskService.update(data).subscribe({
-      next: (res) => {
-        this.isShowMessage = true;
-        this.isSuccess = true;
-        this.message = "Tarefa alterada com sucesso!";
-        this.form.reset();
-      },
-      error: () => {
-        this.isShowMessage = true;
-        this.isSuccess = false;
-        this.message = "Erro ao alterar a tarefa";
-      },
-    });
+    this.taskService.update(data);
+    this.isShowMessage = true;
+    this.isSuccess = true;
+    this.message = "Tarefa alterada com sucesso!";
+    this.form.reset();
   }
 }
