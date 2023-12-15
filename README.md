@@ -5,16 +5,16 @@ Este projeto foi desenvolvido na disciplina Tópicos Especiais no 6º Período d
 ## Protótipo
 
 ### Web
-
 https://www.figma.com/file/fEQB3FuKRsGXtWveidpSQu/Gerenciador-de-Tarefas---Desktop?type=design&node-id=0-1&mode=design&t=ZVsl0HySs0fncsl6-0
 
 ### Mobile
-
 https://www.figma.com/file/vcbKYpH9xy5LAD5yuoFl4A/Gerenciador-de-Tarefas---Mobile?type=design&node-id=1-2&mode=design&t=TwBoGzFmhmTu6ugJ-0
 
 ### GitHub Pages
-
 https://pedrosezar.github.io/gerenciador-de-tarefas/
+
+### Vídeo de apresentação do projeto
+https://youtu.be/gUgtznShF34
 
 ## Checklist
 
