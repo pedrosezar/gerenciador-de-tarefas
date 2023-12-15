@@ -16,6 +16,10 @@ https://www.figma.com/file/vcbKYpH9xy5LAD5yuoFl4A/Gerenciador-de-Tarefas---Mobil
 
 https://pedrosezar.github.io/gerenciador-de-tarefas/
 
+### Vídeo da apresentação do projeto
+
+https://youtu.be/gUgtznShF34
+
 ## Checklist
 
 #### RA1 - Prototipar e projetar interfaces gráficas de usuário, considerando princípios de usabilidade e experiência do usuário.
